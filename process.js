@@ -37,13 +37,13 @@ let commands = {
       return 'gnome-screensaver-command -l'
     },
     shutdown () {
-      return 'systemctl poweroff'
+      return 'pkill -f "java.*JDownloader"; pkill -f "java.*smartgit"; pkill --oldest chromium; pkill --oldest chrome; pkill --oldest nixnote2; pkill notecase; sleep 4; poweroff'
     },
     logout () {
-      return 'logout'
+      return 'pkill -f "java.*JDownloader"; pkill -f "java.*smartgit"; pkill --oldest chromium; pkill --oldest chrome; pkill --oldest nixnote2; pkill notecase; sleep 4; logout'
     },
     restart () {
-      return 'systemctl reboot'
+      return 'pkill -f "java.*JDownloader"; pkill -f "java.*smartgit"; pkill --oldest chromium; pkill --oldest chrome; pkill --oldest nixnote2; pkill notecase; sleep 4; reboot'
     }
   },
   mac: {
